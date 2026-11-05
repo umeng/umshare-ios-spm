@@ -74,7 +74,7 @@ import UMCommon
 import UMShare
 ```
 
-初始化与平台配置请参考 [友盟分享官方文档](https://developer.umeng.com/docs/66632/detail/66825)。
+初始化与平台配置请参考 [友盟分享官方文档](https://devs.umeng.com/docs/128606/detail/193653)。
 
 ## ⚠️ 集成必读（三项关键配置）
 
