@@ -1,0 +1,6 @@
+framework module UMShare {
+  umbrella header "UMShare.h"
+  export *
+
+  module * { export * }
+}
