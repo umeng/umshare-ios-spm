@@ -73,11 +73,13 @@ let package = Package(
         ),
 
         // MARK: - Sina Weibo (新浪微博)
+        // UMSocialSinaAdapter already statically bundles the full WeiboSDK
+        // (official adapter). Linking a separate WeiboSDK binary as well would
+        // produce duplicate symbols, so the adapter alone is used here.
         .binaryTarget(name: "UMSocialSinaAdapter", path: "Frameworks/UMSocialSinaAdapter.xcframework"),
-        .binaryTarget(name: "WeiboSDK", path: "Frameworks/WeiboSDK.xcframework"),
         .target(
             name: "UMShareSina",
-            dependencies: ["UMSocialSinaAdapter", "WeiboSDK", "UMShareCore"],
+            dependencies: ["UMSocialSinaAdapter", "UMShareCore"],
             path: "Sources/UMShareSina",
             resources: [.copy("WeiboSDK.bundle")],
             linkerSettings: [
@@ -96,11 +98,13 @@ let package = Package(
         ),
 
         // MARK: - QQ
+        // UMSocialQQAdapter already statically bundles the full TencentOpenAPI
+        // (official adapter). Linking a separate TencentOpenAPI binary as well
+        // would produce duplicate symbols, so the adapter alone is used here.
         .binaryTarget(name: "UMSocialQQAdapter", path: "Frameworks/UMSocialQQAdapter.xcframework"),
-        .binaryTarget(name: "TencentOpenAPI", path: "Frameworks/TencentOpenAPI.xcframework"),
         .target(
             name: "UMShareQQ",
-            dependencies: ["UMSocialQQAdapter", "TencentOpenAPI", "UMShareCore"],
+            dependencies: ["UMSocialQQAdapter", "UMShareCore"],
             path: "Sources/UMShareQQ",
             resources: [.copy("TencentOpenApi_IOS_Bundle.bundle")],
             linkerSettings: [
