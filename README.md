@@ -137,6 +137,10 @@ umshare-ios-spm/
 > `binaryTarget` 无法声明依赖、资源与 linker 设置，故每个二进制都配一个 shim Swift target
 > 承载这些能力（详见 `Package.swift` 注释）。
 
+## Demo 示例
+
+纯 SwiftPM 集成的完整示例工程见 Demo 仓库 [iOS_SPM_dependency_sample](https://github.com/umeng/iOS_SPM_dependency_sample)，其中分享示例位于 [`UMShareDemo`](https://github.com/umeng/iOS_SPM_dependency_sample/tree/main/UMShareDemo) 目录，克隆后用 Xcode 打开即可编译运行。
+
 ## 许可
 
 SDK 为友盟版权所有的闭源二进制组件；各第三方平台 SDK 版权归对应平台所有，
